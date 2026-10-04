@@ -1,3 +1,5 @@
+## live project
+https://exam-marks-prediction.streamlit.app/
 # Exam Marks Prediction Using Machine Learning
 
 A beginner-friendly B.Tech CSE (AIML) minor project that estimates final exam marks from academic and study-habit indicators. The project compares five regression models and provides a small Streamlit prediction interface.
