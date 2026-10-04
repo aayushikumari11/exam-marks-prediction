@@ -7,6 +7,28 @@ import streamlit as st
 MODEL_PATH = Path(__file__).resolve().parent / "models" / "model.pkl"
 st.set_page_config(page_title="Exam Marks Prediction", page_icon="📘", layout="wide")
 
+st.markdown("""
+<style>
+/* Hide Streamlit toolbar */
+[data-testid="stToolbar"] {
+    visibility: hidden;
+    height: 0%;
+    position: fixed;
+}
+
+/* Hide top-right decoration */
+[data-testid="stDecoration"] {
+    display: none;
+}
+
+/* Hide deploy button */
+[data-testid="stDeployButton"] {
+    display: none;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 @st.cache_resource
 def load_artifact():
     return joblib.load(MODEL_PATH)
