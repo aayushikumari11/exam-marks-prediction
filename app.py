@@ -13,7 +13,7 @@ def load_artifact():
 
 st.title("📘 Exam Marks Prediction Using Machine Learning")
 st.write("Estimate a student's final exam marks from study habits and academic indicators.")
-st.info("This is an ML-based estimate from a synthetic teaching dataset. It is not a guarantee or an official assessment.")
+
 
 if not MODEL_PATH.exists():
     st.error("Model file is missing. From the project folder, run: `python train_model.py`")
