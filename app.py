@@ -248,76 +248,8 @@ def show_feature_importance(model, features):
    
 
 
-# Keep the page on one screen and use in-page links for navigation.
-st.markdown(
-    """
-    <style>
-    .block-container {
-        max-width: 1200px;
-        padding-top: 1.5rem;
-        padding-bottom: 3rem;
-    }
 
-    [data-testid="stAppDeployButton"] {
-        display: none;
-    }
-
-    .top-navigation {
-        display: flex;
-        gap: 0.55rem;
-        overflow-x: auto;
-        padding: 0.65rem;
-        margin: 0.5rem 0 1.5rem 0;
-        border: 1px solid #dce5ed;
-        border-radius: 14px;
-        background: #f7fafc;
-        white-space: nowrap;
-    }
-
-    .top-navigation a {
-        display: inline-block;
-        padding: 0.6rem 0.9rem;
-        border-radius: 10px;
-        color: #17324d;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .top-navigation a:hover {
-        background: #e3eef6;
-        color: #0c5c85;
-    }
-
-    [data-testid="stMetric"] {
-        padding: 1rem;
-        border: 1px solid #dce5ed;
-        border-radius: 14px;
-        background: #ffffff;
-    }
-
-    @media (max-width: 700px) {
-        .block-container {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        .top-navigation a {
-            padding: 0.5rem 0.7rem;
-        }
-    }
-    </style>
-
-    <nav class="top-navigation">
-        <a href="#home">🏠 Home</a>
-        <a href="#prediction">🎯 Prediction</a>
-        <a href="#analytics">📊 Analytics</a>
-        <a href="#model">🤖 Model</a>
-        <a href="#recommendations">💡 Recommendations</a>
-        <a href="#about">ℹ️ About</a>
-    </nav>
-    """,
-    unsafe_allow_html=True,
-)
+   
 
 
 # Load the existing saved artifact. No training happens in this app.
