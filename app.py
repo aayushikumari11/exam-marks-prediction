@@ -57,9 +57,5 @@ if submitted:
     st.success(f"Based on the entered academic information, the predicted exam score is {prediction:.1f} marks.")
 
 st.divider()
-st.subheader("About the model")
-st.write(f"Selected from five regressors using the lowest held-out test RMSE: **{artifact['model_name']}**.")
-if artifact.get("metrics"):
-    st.dataframe(pd.DataFrame(artifact["metrics"]).round(3), use_container_width=True, hide_index=True)
-st.caption("Inputs are indicators, not causes. Real marks also depend on teaching, exam difficulty, health, and many other factors.")
-st.caption("B.Tech CSE (AIML) Minor Project • Educational use")
+
+
