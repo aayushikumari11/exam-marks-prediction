@@ -11,7 +11,8 @@ st.set_page_config(page_title="Exam Marks Prediction", page_icon="📘", layout=
 def load_artifact():
     return joblib.load(MODEL_PATH)
 
-
+st.title("📘 Exam Marks Prediction Using Machine Learning")
+st.write("Estimate a student's final exam marks from study habits and academic indicators.")
 
 if not MODEL_PATH.exists():
     st.error("Model file is missing. From the project folder, run: `python train_model.py`")
@@ -55,3 +56,7 @@ if submitted:
     st.success(f"Based on the entered academic information, the predicted exam score is {prediction:.1f} marks.")
 
 st.divider()
+st.subheader("About the model")
+st.write(f"Selected from five regressors using the lowest held-out test RMSE: **{artifact['model_name']}**.")
+if artifact.get("metrics"):
+    st.dataframe(pd.DataFrame(artifact["metrics"]).round(3), use_container_width=True, hide_index=True)
