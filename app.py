@@ -245,10 +245,7 @@ def show_feature_importance(model, features):
     st.pyplot(figure)
     plt.close(figure)
 
-    st.caption(
-        "Values are taken from the trained model. They describe the model's "
-        "weights or splits, not proof that a feature causes marks to change."
-    )
+    
 
 
 # Keep the page on one screen and use in-page links for navigation.
@@ -503,11 +500,7 @@ if artifact is not None:
         st.progress(int(round(marks)))
         st.caption(f"Estimated score: {marks:.1f}%")
 
-        st.write(
-            "The saved model combines the entered information according to "
-            "patterns learned during training. This is an estimate, not a "
-            "guarantee of the actual exam result."
-        )
+        
 
         st.markdown('<div id="recommendations"></div>', unsafe_allow_html=True)
         st.subheader("💡 Personalized recommendations")
@@ -575,11 +568,7 @@ else:
     st.markdown("**Features used**")
     st.write(", ".join(features))
 
-    st.write(
-        "The app loads the saved model and sends it the entered values in the "
-        "feature order stored with the model. The model returns an estimated "
-        "exam mark. The app does not train or retrain the model."
-    )
+    
 
     st.subheader("Feature Importance")
     show_feature_importance(model, features)
